@@ -2,7 +2,7 @@
 <?php include 'function.php';?>
 <?php
 header("Content-type: image/JPEG");
-$im = imagecreatefromjpeg( rand(1, 15) > 10 ? "xhxh2.jpg" : "xhxh.jpg"); 
+$im = imagecreatefromjpeg( "xhxh.jpg"); 
 $ip = $_SERVER["HTTP_X_FORWARDED_FOR"];// $_SERVER["REMOTE_ADDR"];
 $weekarray=array("日","一","二","三","四","五","六"); //先定义一个数组
 $get=$_GET["s"];
