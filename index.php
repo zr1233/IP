@@ -30,7 +30,7 @@ $black = ImageColorAllocate($im, 0,0,0);//定义黑色的值
 $red = ImageColorAllocate($im, 255,0,0);//红色
 $font = 'msyh.ttf';//加载字体
 $address = $country.'-'.$region.'-'.$city;
-if (strlen($str) == 2) {
+if (strlen($address) == 2) {
     $address = '太阳系';
 }
 //输出
