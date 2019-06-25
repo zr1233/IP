@@ -109,7 +109,7 @@ $agent = $_SERVER['HTTP_USER_AGENT'];
     {  
       $os = 'IBM OS/2';  
     }  
-    else if (preg_match('/Mac/i', $agent) && preg_match('/PC/i', $agent))  
+    else if (preg_match('/Intel Mac OS X/i', $agent) && preg_match('/Macintosh/i', $agent))  
     {  
       $os = 'Macintosh';  
     }  
