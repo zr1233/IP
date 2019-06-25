@@ -30,12 +30,12 @@ $black = ImageColorAllocate($im, 0,0,0);//定义黑色的值
 $red = ImageColorAllocate($im, 255,0,0);//红色
 $font = 'msyh.ttf';//加载字体
 //输出
-imagettftext($im, 16, 0, 10, 40, $red, $font,'欢迎您来自'.$country.'-'.$region.'-'.$city.'的朋友');
-imagettftext($im, 16, 0, 10, 72, $red, $font, '今天是'.date('Y年n月j日')."  星期".$weekarray[date("w")]);//当前时间添加到图片
-imagettftext($im, 16, 0, 10, 104, $red, $font,'您的IP是:'.$ip);//ip
-imagettftext($im, 16, 0, 10, 140, $red, $font,'您使用的是'.$os.'操作系统');
-imagettftext($im, 16, 0, 10, 175, $red, $font,'您使用的是'.$bro.'浏览器');
-imagettftext($im, 14, 0, 10, 200, $black, $font,$get); 
+imagettftext($im, 14, 0, 10, 40, $black, $font,'欢迎您来自'.$country.'-'.$region.'-'.$city.'的朋友');
+imagettftext($im, 14, 0, 10, 72, $black, $font, '今天是'.date('Y年n月j日')."  星期".$weekarray[date("w")]);//当前时间添加到图片
+imagettftext($im, 14, 0, 10, 104, $red, $font,'您的IP是:'.$ip);//ip
+imagettftext($im, 14, 0, 10, 140, $black, $font,'您使用的是'.$os.'操作系统');
+imagettftext($im, 14, 0, 10, 175, $black, $font,'您使用的是'.$bro.'浏览器');
+imagettftext($im, 16, 0, 10, 200, $red, $font,$get); 
 // imagettftext($im, 15, 0, 10, 200, $red, $font,'祝您网上冲浪愉快,大家携手,共建和谐网络.'); 
 ImageGif($im);
 ImageDestroy($im);
