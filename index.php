@@ -36,7 +36,7 @@ imagettftext($im, 16, 0, 10, 104, $red, $font,'您的IP是:'.$ip);//ip
 imagettftext($im, 16, 0, 10, 140, $red, $font,'您使用的是'.$os.'操作系统');
 imagettftext($im, 16, 0, 10, 175, $red, $font,'您使用的是'.$bro.'浏览器');
 imagettftext($im, 14, 0, 10, 200, $black, $font,$get); 
-imagettftext($im, 15, 0, 10, 200, $red, $font,'祝您网上冲浪愉快,大家携手,共建和谐网络.'); 
+// imagettftext($im, 15, 0, 10, 200, $red, $font,'祝您网上冲浪愉快,大家携手,共建和谐网络.'); 
 ImageGif($im);
 ImageDestroy($im);
 ?>
