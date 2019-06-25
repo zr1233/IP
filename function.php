@@ -161,6 +161,10 @@ $agent = $_SERVER['HTTP_USER_AGENT'];
     {  
       $os = 'offline';  
     }  
+    else if (preg_match('/iPhone/i', $agent))  
+    {  
+      $os = 'iOS';  
+    }  
     else  
     {  
       $os = '未知操作系统';  
