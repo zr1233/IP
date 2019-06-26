@@ -64,7 +64,7 @@ imagettftext($im, 15, 0, 10, 140, $black, $font,'您的IP是:'.$ip.'  :('.$count
 imagettftext($im, 15, 0, 10, 175, $black, $font,'您使用的是'.$os.'操作系统');
 imagettftext($im, 16, 0, 10, 205, $red, $font,$get);  
 // ImageGif($im);
-imagejpeg($im,null,30);
+imagejpeg($im,null,10);
 ImageDestroy($im);
 ?>
 <?php
