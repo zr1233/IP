@@ -25,8 +25,8 @@ $data = json_decode($data, true);
 $country = $data['data']['country']; 
 $region = $data['data']['region']; 
 $city = $data['data']['city'];
-
-$url="http://api.map.baidu.com/telematics/v3/weather?output=json&ak=A4ddc10f0a87914d68e99d8e267fc749&location=".$region.$city;
+$bak = getenv("BAK");
+$url = "http://api.map.baidu.com/telematics/v3/weather?output=json&ak=".$bak."&location=".$region.$city;
 $curl = curl_init(); 
 curl_setopt($curl, CURLOPT_URL, $url); 
 curl_setopt($curl, CURLOPT_HEADER, 0);  
