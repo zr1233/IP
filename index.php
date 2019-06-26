@@ -1,4 +1,4 @@
-<?php $counter = intval(file_get_contents("counter_z.dat")); ?>
+<?php $counter = intval(file_get_contents("counter.dat")); ?>
 <?php include 'function.php';?>
 <?php
 header("Content-type: image/JPEG");
@@ -67,10 +67,10 @@ ImageGif($im);
 ImageDestroy($im);
 ?>
 <?php
-    $counter = intval(file_get_contents("counter_z.dat"));  
+    $counter = intval(file_get_contents("counter.dat"));  
      $_SESSION['#'] = true;  
      $counter++;  
-     $fp = fopen("counter_z.dat","w");  
+     $fp = fopen("counter.dat","w");  
      fwrite($fp, $counter);  
      fclose($fp); 
  ?>
