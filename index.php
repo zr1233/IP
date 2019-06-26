@@ -1,3 +1,4 @@
+<?php date_default_timezone_set("Etc/GMT+8"); ?>
 <?php $counter = intval(file_get_contents("counter.dat")); ?>
 <?php include 'function.php';?>
 <?php
