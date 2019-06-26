@@ -2,7 +2,16 @@
 <?php include 'function.php';?>
 <?php
 header("Content-type: image/JPEG");
-$im = imagecreatefromjpeg( "xhxh.jpg"); 
+$r = rand(1,10);
+if($r < 3){
+    $im = imagecreatefromjpeg( "xhxh.jpg"); 
+}else if($r < 6){
+    $im = imagecreatefromjpeg( "xhxh1.jpg"); 
+}
+else{
+    $im = imagecreatefromjpeg( "xhxh2.jpg");  
+}
+
 $ip = $_SERVER["HTTP_X_FORWARDED_FOR"];// $_SERVER["REMOTE_ADDR"];
 $weekarray=array("日","一","二","三","四","五","六"); //先定义一个数组
 $get=$_GET["s"];
@@ -64,7 +73,7 @@ imagettftext($im, 15, 0, 10, 140, $black, $font,'您的IP是:'.$ip.'  :('.$count
 imagettftext($im, 15, 0, 10, 175, $black, $font,'您使用的是'.$os.'操作系统');
 imagettftext($im, 16, 0, 10, 205, $red, $font,$get);  
 // ImageGif($im);
-imagejpeg($im,null,10);
+imagejpeg($im,null,30);
 ImageDestroy($im);
 ?>
 <?php
