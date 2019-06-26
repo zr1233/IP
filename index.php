@@ -3,7 +3,7 @@
 <?php include 'function.php';?>
 <?php
 header("Content-type: image/JPEG");
-$r = rand(0,3);
+$r = rand(0,10);
 $im = imagecreatefromjpeg( "xhxh".$r.".jpg"); 
 
 $ip = $_SERVER["HTTP_X_FORWARDED_FOR"];// $_SERVER["REMOTE_ADDR"];
