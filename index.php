@@ -36,9 +36,9 @@ if (strlen($address) == 2) {
 //输出
 imagettftext($im, 16, 0, 10, 40, $black, $font,'欢迎您,来自'.$address.'的朋友');
 imagettftext($im, 16, 0, 10, 72, $black, $font, '今天是'.date('Y年n月j日')."  星期".$weekarray[date("w")]);//当前时间添加到图片
-imagettftext($im, 16, 0, 10, 104, $black, $font,'您的IP是:'.$ip.'  ('.$counter.')');//ip
+imagettftext($im, 16, 0, 10, 104, $black, $font,'您的IP是:'.$ip.'  :('.$counter.')');//ip
 imagettftext($im, 15, 0, 10, 140, $black, $font,'您使用的是'.$os.'操作系统');
-imagettftext($im, 15, 0, 10, 175, $black, $font,'您使用的是'.$bro.'浏览器');
+imagettftext($im, 15, 0, 10, 175, $black, $font,'您使用的是'.$bro);
 imagettftext($im, 16, 0, 10, 205, $red, $font,$get); 
 // imagettftext($im, 15, 0, 10, 200, $red, $font,'祝您网上冲浪愉快,大家携手,共建和谐网络.'); 
 ImageGif($im);
