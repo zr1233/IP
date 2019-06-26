@@ -26,8 +26,7 @@ $country = $data['data']['country'];
 $region = $data['data']['region']; 
 $city = $data['data']['city'];
 
-$url="http://api.map.baidu.com/telematics/v3/weather?output=json&ak=A4ddc10f0a87914d68e99d8e267fc749location=武汉";
-print($url);
+$url="http://api.map.baidu.com/telematics/v3/weather?output=json&ak=A4ddc10f0a87914d68e99d8e267fc749&location=".$region.$city;
 $curl = curl_init(); 
 curl_setopt($curl, CURLOPT_URL, $url); 
 curl_setopt($curl, CURLOPT_HEADER, 0);  
@@ -38,8 +37,10 @@ curl_setopt($curl, CURLOPT_ENCODING, '');
 curl_setopt($curl, CURLOPT_USERAGENT, $UserAgent);  
 curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);  
 $data = curl_exec($curl);
+
 $data = json_decode($data, true);
-$weather = $data['results']['weather_data'][0]['weather'].' '.$data['results']['weather_data'][0]['wind'];
+
+$weather = $data['results'][0]['weather_data'][0]['weather'].' '.$data['results'][0]['weather_data'][0]['wind'];
 if(strlen($weather) > 2){
 
 }
