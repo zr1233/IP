@@ -22,7 +22,14 @@ function get_bro(){
          preg_match("/Edge\/([\d\.]+)/", $sys, $Edge);  
          $exp[0] = "Edge";  
          $exp[1] = $Edge[1];  
-     } elseif (stripos($sys, "Chrome") > 0) {  
+     }
+     elseif(stripos($sys, "ithome") > 0) {  
+      //win10 Edge浏览器 添加了chrome内核标记 在判断Chrome之前匹配  
+      preg_match("/ithome\/([\d\.]+)/", $sys, $Edge);  
+      $exp[0] = "IT之家";  
+      $exp[1] = $Edge[1];  
+    }
+      elseif (stripos($sys, "Chrome") > 0) {  
              preg_match("/Chrome\/([\d\.]+)/", $sys, $google);  
          $exp[0] = "Chrome";  
          $exp[1] = $google[1];  //获取google chrome的版本号  
