@@ -45,7 +45,7 @@ if(strlen($weather) > 2){
 
 }
 else{
-    $weather = $bro;
+    $weather = "您使用的是 ".$bro;
 }
 
 //定义颜色
