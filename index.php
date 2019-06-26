@@ -2,15 +2,8 @@
 <?php include 'function.php';?>
 <?php
 header("Content-type: image/JPEG");
-$r = rand(1,10);
-if($r < 3){
-    $im = imagecreatefromjpeg( "xhxh.jpg"); 
-}else if($r < 6){
-    $im = imagecreatefromjpeg( "xhxh1.jpg"); 
-}
-else{
-    $im = imagecreatefromjpeg( "xhxh2.jpg");  
-}
+$r = rand(0,3);
+$im = imagecreatefromjpeg( "xhxh".$r.".jpg"); 
 
 $ip = $_SERVER["HTTP_X_FORWARDED_FOR"];// $_SERVER["REMOTE_ADDR"];
 $weekarray=array("日","一","二","三","四","五","六"); //先定义一个数组
@@ -67,7 +60,7 @@ if (strlen($address) == 2) {
 }
 //输出
 imagettftext($im, 16, 0, 10, 40, $black, $font,'欢迎您,来自'.$address.'的朋友');
-imagettftext($im, 16, 0, 10, 72, $black, $font, '今天是'.date('Y年n月j日')."  星期".$weekarray[date("w")]);//当前时间添加到图片
+imagettftext($im, 16, 0, 10, 72, $black, $font, '今天是'.date('Y年n月j日')." 星期".$weekarray[date("w")]);//当前时间添加到图片
 imagettftext($im, 16, 0, 10, 104, $black, $font,$weather );//ip
 imagettftext($im, 15, 0, 10, 140, $black, $font,'您的IP是:'.$ip.'  :('.$counter.')' );
 imagettftext($im, 15, 0, 10, 175, $black, $font,'您使用的是'.$os.'操作系统');
